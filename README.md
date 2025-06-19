@@ -191,5 +191,5 @@ Click the **"Add"** button to include the data point.
   * Red = High Value
   * Orange = Medium Value
   * Green = Low Value
-Sample cities.json and pak-cities.csv files are present in the main repository.
+  * Sample cities.json and pak-cities.csv files are present in the main repository.
 
