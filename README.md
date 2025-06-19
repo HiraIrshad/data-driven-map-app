@@ -111,24 +111,24 @@ src/
 
 The application is built with a **frontend-only architecture**, focusing entirely on **client-side functionality**. The workflow is designed to maximize interactivity and usability **without a backend**.
 
-### 🧩 Data Input Handling
+### Data Input Handling
 
 * Users can upload `.csv` or `.json` files with `city`, `lat`, `lng`, and `value` fields
 * Manual entry via a form is also supported
 
-### 🔄 Data Processing
+### Data Processing
 
 * Uploaded/entered data is parsed and validated using **PapaParse** and `JSON.parse`
 * Filtering via `Array.filter`, searching via `String.includes`, sorting via `Array.sort`
 
-### 🗺️ Data Visualization
+### Data Visualization
 
 * Data is visualized with **Leaflet markers** using React Leaflet
 * Markers are **color-coded** based on value range (e.g., red = high, green = low)
 * Clicking a marker shows a **popup** with city name and value
 * A **dynamic legend** explains marker colors
 
-### 💡 UI and UX
+### UI and UX
 
 * Fully responsive layout for mobile and desktop
 * User-friendly controls for uploading, filtering, sorting, and searching
@@ -138,15 +138,15 @@ This design delivers a fast, interactive, and intuitive experience for geographi
 
 ---
 
-**## 📌 Example Usage**
+**## Example Usage**
 
-### 🗂 Uploading Data
+### Uploading Data
 
 Click the **"Choose File"** button and upload a `.csv` or `.json` file.
 
 Your file should contain at least the following fields: `city`, `lat`, `lng`, and `value`.
 
-#### 📄 Example JSON Format:
+#### Example JSON Format:
 
 ```json
 [
@@ -156,7 +156,7 @@ Your file should contain at least the following fields: `city`, `lat`, `lng`, an
 ]
 ```
 
-#### 📄 Example CSV Format:
+#### Example CSV Format:
 
 ```
 city,lat,lng,value
@@ -165,7 +165,7 @@ Karachi,24.8607,67.0011,14000000
 Islamabad,33.6844,73.0479,1000000
 ```
 
-### ✍️ Manual Entry
+### Manual Entry
 
 Use the form inputs to enter:
 
@@ -176,24 +176,19 @@ Use the form inputs to enter:
 
 Click the **"Add"** button to include the data point.
 
-### 🔍 Filtering, Searching, Sorting
+### Filtering, Searching, Sorting
 
 * **Filter**: Show only cities where value is above a threshold
 * **Search**: Find cities by name
 * **Sort**: Use dropdowns to sort by **city name** or **value** (ascending/descending)
 
-### 🗺️ Interacting with the Map
+### Interacting with the Map
 
 * Markers will appear on the map for each city
 * Click a marker to see city name and value
 * Refer to the **legend** on the top right of the map to understand the color scheme:
 
-  * 🟥 Red = High Value
-  * 🟧 Orange = Medium Value
-  * 🟩 Green = Low Value
+  * Red = High Value
+  * Orange = Medium Value
+  * Green = Low Value
 
----
-
-**## License**
-
-MIT License
