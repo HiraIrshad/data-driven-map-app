@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
 
 .App-logo {
@@ -12,6 +13,82 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.app,
+.app-container {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+  background: #ADEED9;
+}
+
+h1,
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #004080;
+  background: #0ABAB5;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-row,
+.form-inputs,
+.filter-sort,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+  background: #56DFCF;
+  border-radius: 8px;
+}
+
+input,
+select,
+button,
+.upload-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+  outline: none;
+}
+
+button {
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #00c6ff;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.marker-red { background-color: #e74c3c; }
+.marker-orange { background-color: #f39c12; }
+.marker-green { background-color: #27ae60; }
 
 .App-header {
   background-color: #282c34;
@@ -29,10 +106,78 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
+
+.map-legend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #ffffffcc;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  background: #F6C794;
+}
+
+.map-legend h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.map-legend div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.table-section {
+  margin-top: 2rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #4facfe;
+  color: white;
+}
+
+.data-table tr:hover {
+  background-color: #f1f9ff;
+}
+

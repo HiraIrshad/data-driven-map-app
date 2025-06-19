@@ -1,0 +1,17 @@
+[
+  { "city": "Karachi", "lat": 24.8607, "lng": 67.0011, "value": 14910352 },
+  { "city": "Lahore", "lat": 31.5497, "lng": 74.3436, "value": 11126285 },
+  { "city": "Faisalabad", "lat": 31.4504, "lng": 73.135, "value": 3203846 },
+  { "city": "Rawalpindi", "lat": 33.5651, "lng": 73.0169, "value": 2098231 },
+  { "city": "Multan", "lat": 30.1575, "lng": 71.5249, "value": 1871843 },
+  { "city": "Peshawar", "lat": 34.015, "lng": 71.5805, "value": 1970042 },
+  { "city": "Quetta", "lat": 30.1798, "lng": 66.975, "value": 1001205 },
+  { "city": "Islamabad", "lat": 33.6844, "lng": 73.0479, "value": 1014825 },
+  { "city": "Sialkot", "lat": 32.4945, "lng": 74.5229, "value": 655852 },
+  { "city": "Gujranwala", "lat": 32.1877, "lng": 74.1945, "value": 2930977 },
+  { "city": "Hyderabad", "lat": 25.396, "lng": 68.3578, "value": 1732693 },
+  { "city": "Bahawalpur", "lat": 29.3956, "lng": 71.6836, "value": 762111 },
+  { "city": "Sargodha", "lat": 32.0836, "lng": 72.6711, "value": 659862 },
+  { "city": "Sukkur", "lat": 27.7052, "lng": 68.8574, "value": 500000 },
+  { "city": "Larkana", "lat": 27.5635, "lng": 68.215, "value": 490508 }
+]
