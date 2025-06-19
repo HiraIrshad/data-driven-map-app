@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+**# Interactive Data-Driven Map Web Application**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**## Project Overview**
 
-## Available Scripts
+This is a React-based web application that allows users to input and visualize geographical data on an interactive map. Users can upload location data via **CSV** or **JSON** files or manually input city information along with coordinates and a numeric value (such as population). The data can then be **filtered**, **searched**, **sorted**, and displayed using **markers on a Leaflet map**. Markers are **color-coded** based on the numeric value, and a **legend** is displayed for better interpretation.
 
-In the project directory, you can run:
+**### Key Features**
 
-### `npm start`
+* Upload data in **CSV** or **JSON** formats
+* Manually add new location data
+* Filter data based on a **numerical threshold**
+* Search cities by name
+* Sort data by **city name** or **value** (ascending/descending)
+* Display data as markers on an interactive **Leaflet map**
+* **Color-coded markers** with a **map legend**
+* **Responsive** and **visually appealing** UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**## Setup and Run Instructions**
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Node.js (v14 or above)
+* npm or yarn
 
-### `npm run build`
+### Steps to Run Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+https://github.com/HiraIrshad/data-driven-map-app.git
+cd data-driven-map-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies**
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*or if you're using yarn:*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+yarn install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the Development Server**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+*or*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Open in Browser**
 
-### Code Splitting
+Navigate to `http://localhost:3000` to view the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Optional
 
-### Analyzing the Bundle Size
+To build the app for production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**## Technologies Used**
 
-### Advanced Configuration
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **React**: JavaScript library for building UI components and managing application state
+* **React Leaflet**: Wrapper around Leaflet for rendering interactive maps in React
+* **Leaflet**: JavaScript library for displaying maps and location markers
+* **PapaParse**: Library for parsing CSV files into usable JavaScript objects
+* **HTML5 & CSS3**: Used for layout, design, and responsive structure
+* **JavaScript (ES6+)**: Core programming language used in the app logic
 
-### Deployment
+### Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Responsive layout using **Flexbox**
+* Custom **color-coded markers** and **map legends** for better data interpretation
 
-### `npm run build` fails to minify
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **None required** – This project is 100% frontend and client-side
+
+---
+
+**## Folder Structure**
+
+```
+public/
+  index.html
+src/
+  App.js         # Main app logic
+  App.css        # Styling
+  index.js       # React entry point
+  assets/        # (optional) icons or images
+```
+
+---
+
+**## Approach**
+
+The application is built with a **frontend-only architecture**, focusing entirely on **client-side functionality**. The workflow is designed to maximize interactivity and usability **without a backend**.
+
+### 🧩 Data Input Handling
+
+* Users can upload `.csv` or `.json` files with `city`, `lat`, `lng`, and `value` fields
+* Manual entry via a form is also supported
+
+### 🔄 Data Processing
+
+* Uploaded/entered data is parsed and validated using **PapaParse** and `JSON.parse`
+* Filtering via `Array.filter`, searching via `String.includes`, sorting via `Array.sort`
+
+### 🗺️ Data Visualization
+
+* Data is visualized with **Leaflet markers** using React Leaflet
+* Markers are **color-coded** based on value range (e.g., red = high, green = low)
+* Clicking a marker shows a **popup** with city name and value
+* A **dynamic legend** explains marker colors
+
+### 💡 UI and UX
+
+* Fully responsive layout for mobile and desktop
+* User-friendly controls for uploading, filtering, sorting, and searching
+* Additional **data table** for textual reference of the dataset
+
+This design delivers a fast, interactive, and intuitive experience for geographic data visualization.
+
+---
+
+**## 📌 Example Usage**
+
+### 🗂 Uploading Data
+
+Click the **"Choose File"** button and upload a `.csv` or `.json` file.
+
+Your file should contain at least the following fields: `city`, `lat`, `lng`, and `value`.
+
+#### 📄 Example JSON Format:
+
+```json
+[
+  { "city": "Lahore", "lat": 31.5497, "lng": 74.3436, "value": 11000000 },
+  { "city": "Karachi", "lat": 24.8607, "lng": 67.0011, "value": 14000000 },
+  { "city": "Islamabad", "lat": 33.6844, "lng": 73.0479, "value": 1000000 }
+]
+```
+
+#### 📄 Example CSV Format:
+
+```
+city,lat,lng,value
+Lahore,31.5497,74.3436,11000000
+Karachi,24.8607,67.0011,14000000
+Islamabad,33.6844,73.0479,1000000
+```
+
+### ✍️ Manual Entry
+
+Use the form inputs to enter:
+
+* **City Name**
+* **Latitude**
+* **Longitude**
+* **Value**
+
+Click the **"Add"** button to include the data point.
+
+### 🔍 Filtering, Searching, Sorting
+
+* **Filter**: Show only cities where value is above a threshold
+* **Search**: Find cities by name
+* **Sort**: Use dropdowns to sort by **city name** or **value** (ascending/descending)
+
+### 🗺️ Interacting with the Map
+
+* Markers will appear on the map for each city
+* Click a marker to see city name and value
+* Refer to the **legend** on the top right of the map to understand the color scheme:
+
+  * 🟥 Red = High Value
+  * 🟧 Orange = Medium Value
+  * 🟩 Green = Low Value
+
+---
+
+**## License**
+
+MIT License
